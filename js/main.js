@@ -1,3 +1,5 @@
+import { MenuCard } from './MenuCard.js';
+
 window.addEventListener('DOMContentLoaded', () => {
   // Tabs
   const tabs = document.querySelectorAll('.tabheader__item');
@@ -43,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  //Timer
+  /////////////////////////////////Timer
 
   const deadline = '2022-12-31';
   
@@ -108,7 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // Modal
+  ///////////////////////////// Modal
 
   const modalTrigger = document.querySelectorAll('[data-modal]');
   const modal = document.querySelector('.modal');
@@ -160,8 +162,36 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  
   window.addEventListener('scroll', showModalbyScroll);
 
 
+
+  ////////////////////////// class для карточек
+
+  new MenuCard(
+    "img/tabs/elite.jpg",
+    "vegy",
+    'Меню "Фитнес"',
+    'Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
+    9,
+    '.menu .container'
+  ).render();
+
+  new MenuCard(
+    "img/tabs/elite.jpg",
+    "elite",
+    'Меню "Премиум"',
+    'В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!',
+    5,
+    '.menu .container'
+  ).render();
+
+  new MenuCard(
+    "img/tabs/post.jpg",
+    "post",
+    'Меню "Постное"',
+    'Меню “Постное” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения, молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет тофу и импортных вегетарианских стейков.',
+    4,
+    '.menu .container'
+  ).render(); 
 });
